@@ -21,7 +21,16 @@ var Filter = require('bad-words')
 filter = new Filter();
 
 
-mongoose.connect('mongodb://68.183.227.147:27017');
+
+const MONGO_USERNAME = 'alimuhanad';
+const MONGO_PASSWORD = 'ali123456';
+const MONGO_HOSTNAME = '68.183.227.147';
+const MONGO_PORT = '27017';
+const MONGO_DB = 'admin';
+
+const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
+mongoose.connect(url, {useNewUrlParser: true});
+
 const app = express()
 
 // //دالة التاكد من ان التوكن الي تم ارساله خلال الصفحة الي تم اختيارها صحيح ومسجل
