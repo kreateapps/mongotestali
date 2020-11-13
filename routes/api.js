@@ -21,7 +21,7 @@ var Filter = require('bad-words')
 filter = new Filter();
 
 
-mongoose.connect('mongodb://a:a@ds161539.mlab.com:61539/a');
+mongoose.connect('mongodb://68.183.227.147:27017');
 const app = express()
 
 // //دالة التاكد من ان التوكن الي تم ارساله خلال الصفحة الي تم اختيارها صحيح ومسجل
